@@ -1,0 +1,24 @@
+% Shared vector-diagram palette; also used by standalone preview builds.
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{diagramink}{HTML}{253545}
+\definecolor{diagrammuted}{HTML}{60717D}
+\definecolor{diagramline}{HTML}{CBD4DA}
+\definecolor{diagramlight}{HTML}{F3F6F8}
+\definecolor{sparsecolor}{HTML}{8B8FCA}
+\definecolor{densecolor}{HTML}{B9786F}
+\definecolor{ofccolor}{HTML}{4C65A4}
+\definecolor{poscolor}{HTML}{F3A683}
+\definecolor{headcolor}{HTML}{4C65A4}
+\definecolor{highlightcolor}{HTML}{FFD7A8}
+\tikzset{
+  diagram/.style={x=1cm,y=-1cm,
+    font=\fontencoding{T1}\fontfamily{phv}\fontsize{8.5}{10.5}\selectfont,
+    text=diagramink,>=Latex,line cap=round,line join=round},
+  dbox/.style={draw=diagramline,fill=white,rounded corners=2pt,
+    line width=.65pt,align=center,inner sep=5pt},
+  dflow/.style={->,line width=.9pt,draw=diagramink},
+  dcontrol/.style={->,densely dashed,line width=.8pt,draw=diagrammuted},
+  dsmall/.style={font=\fontencoding{T1}\fontfamily{phv}\fontsize{7.5}{9}\selectfont},
+  dhead/.style={font=\fontencoding{T1}\fontfamily{phv}\bfseries\fontsize{9}{11}\selectfont,anchor=west},
+  dlabel/.style={fill=white,inner sep=2pt,dsmall},
+}

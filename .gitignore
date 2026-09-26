@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+runtime/
+artifacts/*/*/turns.jsonl
+artifacts/*/*/eval_turns.jsonl
+artifacts/*/*/ckpt.pt
+artifacts/*/*/run.log
+paper/figures/*.pdf
+paper/figures/*.aux
+paper/figures/*.log
+*.safetensors
+*.pt

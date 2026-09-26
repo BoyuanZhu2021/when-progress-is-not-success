@@ -1,0 +1,17 @@
+\setlength{\tabcolsep}{3pt}\small
+\resizebox{\linewidth}{!}{\begin{tabular}{l r r r r r r r r r}
+\toprule
+\rowcolor{headcolor}\textcolor{white}{Method} & \textcolor{white}{\begin{tabular}[b]{@{}c@{}}Held-out ASR (\%)\\mean $\pm$ sd\end{tabular}} & \textcolor{white}{\begin{tabular}[b]{@{}c@{}}$\Delta$ vs \sparse{}\\$\pm$\,95\% (pp)\end{tabular}} & \textcolor{white}{\begin{tabular}[b]{@{}c@{}}Rel.\ $\Delta$\\(\%)\end{tabular}} & \textcolor{white}{$p$} & \textcolor{white}{Wins} & \textcolor{white}{\begin{tabular}[b]{@{}c@{}}Held-out\\$\Phi$\end{tabular}} & \textcolor{white}{\begin{tabular}[b]{@{}c@{}}Examples\\/ iteration\end{tabular}} & \textcolor{white}{\begin{tabular}[b]{@{}c@{}}Zero-signal\\groups (\%)\end{tabular}} & \textcolor{white}{\begin{tabular}[b]{@{}c@{}}Train\\succ.\ (\%)\end{tabular}} \\
+\midrule
+\addlinespace[3pt]
+\rowcolor{headcolor!10}\multicolumn{10}{l}{\textbf{Iteration} 8} \\
+\raisebox{0.3ex}{\textcolor{sparsecolor}{\rule{5pt}{5pt}}}~\sparse{} (ref.) & 15.45 $\pm$ 2.0 & -- & -- & -- & -- & 0.357 & 50 & 73.0 & 13.2 \\
+\raisebox{0.3ex}{\textcolor{densecolor}{\rule{5pt}{5pt}}}~Dense & 9.63 $\pm$ 3.0 & \cellcolor{densecolor!14}\textcolor{densecolor}{$-$5.82 $\pm$ 6.78} & \textcolor{densecolor}{$-$37.6} & 0.0720 & \textcolor{densecolor}{0/4}\,\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{0.0pt}{4pt}}\textcolor{gray!35}{\rule{12.0pt}{4pt}}} & 0.481 & 158 & 11.6 & 9.2 \\
+\rowcolor{ofccolor!20}\textbf{\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{5pt}{5pt}}}~\textcolor{ofccolor}{OFC}} & \textbf{19.36 $\pm$ 4.0} & \textbf{\textcolor{ofccolor}{$+$3.91 $\pm$ 4.17}} & \textbf{\textcolor{ofccolor}{$+$25.3}} & \textbf{0.0584} & \textbf{\textcolor{ofccolor}{4/4}\,\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{12.0pt}{4pt}}\textcolor{gray!35}{\rule{0.0pt}{4pt}}}} & \textbf{0.360} & \textbf{26} & \textbf{70.3} & \textbf{15.0} \\
+\addlinespace[3pt]
+\rowcolor{headcolor!10}\multicolumn{10}{l}{\textbf{Iteration} 16} \\
+\raisebox{0.3ex}{\textcolor{sparsecolor}{\rule{5pt}{5pt}}}~\sparse{} (ref.) & 18.23 $\pm$ 1.6 & -- & -- & -- & -- & 0.359 & 52 & 71.2 & 16.8 \\
+\raisebox{0.3ex}{\textcolor{densecolor}{\rule{5pt}{5pt}}}~Dense & 15.45 $\pm$ 3.7 & \cellcolor{densecolor!14}\textcolor{densecolor}{$-$2.77 $\pm$ 5.51} & \textcolor{densecolor}{$-$15.2} & 0.2072 & \textcolor{densecolor}{1/4}\,\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{3.0pt}{4pt}}\textcolor{gray!35}{\rule{9.0pt}{4pt}}} & 0.583 & 145 & 19.0 & 11.7 \\
+\rowcolor{ofccolor!20}\textbf{\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{5pt}{5pt}}}~\textcolor{ofccolor}{OFC}} & \textbf{20.31 $\pm$ 4.0} & \textbf{\textcolor{ofccolor}{$+$2.08 $\pm$ 4.36}} & \textbf{\textcolor{ofccolor}{$+$11.4}} & \textbf{0.2257} & \textbf{\textcolor{ofccolor}{3/4}\,\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{9.0pt}{4pt}}\textcolor{gray!35}{\rule{3.0pt}{4pt}}}} & \textbf{0.344} & \textbf{31} & \textbf{68.9} & \textbf{18.7} \\
+\bottomrule
+\end{tabular}}

@@ -1,0 +1,67 @@
+{
+  "G": 6,
+  "K": 4,
+  "K_fields": 4,
+  "T": 5,
+  "adaptive_floor": null,
+  "adaptive_rollout": false,
+  "arm": "dense",
+  "attacker": {
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "baseline": "state_stratified",
+  "beta_anneal": null,
+  "beta_kl": 0.02,
+  "beta_kl_effective": 0.02,
+  "beta_shape": null,
+  "dynamic_sampling": 0.0,
+  "eval_every": 8,
+  "eval_k": 12,
+  "eval_m_of_K": 4,
+  "full_ft": true,
+  "hindsight_m": null,
+  "kind": "a3_multiturn_train",
+  "loss": "pg",
+  "lr": 2e-06,
+  "m_curriculum": false,
+  "m_of_K": 4,
+  "mc_value_K": 0,
+  "mechanism": "multidomain",
+  "n_ood": 8,
+  "n_ood_goals": 24,
+  "n_train": 8,
+  "n_train_goals": 24,
+  "n_transfer_goals": 8,
+  "reward": "dense=\u0394\u03a6_t (fixed shaping)",
+  "reward_mode": "scored",
+  "run_id": "s5_dense",
+  "seed": 5,
+  "self_imitate": 0,
+  "steps": 16,
+  "tau": 1.0,
+  "tau_m": 1.0,
+  "tau_stop": 1.0,
+  "train_domains": [
+    "banking",
+    "travel",
+    "workspace"
+  ],
+  "transfer_domain": "slack",
+  "victim": {
+    "base_url": "http://127.0.0.1:8000/v1",
+    "serve_manifest": {
+      "compute_capability": "9.0",
+      "model": "Qwen/Qwen3.8-27B-FP8",
+      "quant": "auto",
+      "revision": "017b9c7af6b5689d5dd426a76e0bc077eb5ca20a",
+      "tool_call_parser": "qwen3_xml",
+      "tp": 1
+    },
+    "served_models": [
+      "Qwen/Qwen3.8-27B-FP8"
+    ]
+  },
+  "victim_caution": "cautious",
+  "written_at": "2026-09-02T18:50:54.335+08:00"
+}

@@ -1,0 +1,22 @@
+% Compiles the paper's result figures on their own: tectonic standalone.tex (or pdflatex).
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx,xcolor,pgfplots}
+\usepgfplotslibrary{groupplots,fillbetween}
+\pgfplotsset{compat=1.18}
+\input{diagram_style.tex}
+\definecolor{samplecolor}{HTML}{E8C1CC}
+\newcommand{\ofc}{\textsc{OFC}}
+\newcommand{\sparse}{\textsc{Sparse}}
+\newcommand{\dense}{\textsc{Dense}}
+\newcommand{\posrl}{\textsc{Positive-only RL}}
+\begin{document}
+\section*{Figure 3: training dynamics (matched seeds 2--7)}
+\noindent\resizebox{\linewidth}{!}{\input{training_dynamics.tex}}
+\section*{Figure 5: budget dependence}
+\noindent\resizebox{\linewidth}{!}{\input{budget_effects.tex}}
+\section*{Figure 7: auxiliary training diagnostics}
+\noindent\resizebox{\linewidth}{!}{\input{training_diagnostics.tex}}
+\end{document}

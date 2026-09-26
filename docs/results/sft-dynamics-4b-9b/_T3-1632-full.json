@@ -1,0 +1,130 @@
+{
+  "label": "EXP-2026W36-006-T3-1632-full",
+  "metric": "ood_asr",
+  "arms": [
+    "rl_pos",
+    "sft"
+  ],
+  "steps": [
+    16,
+    32
+  ],
+  "per_step": {
+    "16": {
+      "n": 6,
+      "rl_pos_mean": 0.48088,
+      "sft_mean": 0.45195,
+      "paired_t": {
+        "n": 6,
+        "effect": 0.028933,
+        "sd_between": 0.072172,
+        "se": 0.029464,
+        "t": 0.982,
+        "p_two_sided": 0.3712,
+        "per_seed_diffs": [
+          0.0173,
+          0.0382,
+          -0.0139,
+          -0.059,
+          0.0347,
+          0.1563
+        ],
+        "sign_dense_gt_sparse": 4
+      },
+      "bootstrap": {
+        "ci95_lower": -0.01967,
+        "ci95_upper": 0.0874,
+        "p_two_sided_boot": 0.2641
+      }
+    },
+    "32": {
+      "n": 6,
+      "rl_pos_mean": 0.52892,
+      "sft_mean": 0.50983,
+      "paired_t": {
+        "n": 6,
+        "effect": 0.019083,
+        "sd_between": 0.043878,
+        "se": 0.017913,
+        "t": 1.0653,
+        "p_two_sided": 0.33545,
+        "per_seed_diffs": [
+          -0.0348,
+          0.059,
+          0.0,
+          0.0313,
+          -0.0174,
+          0.0764
+        ],
+        "sign_dense_gt_sparse": 3
+      },
+      "bootstrap": {
+        "ci95_lower": -0.01218,
+        "ci95_upper": 0.05207,
+        "p_two_sided_boot": 0.2342
+      }
+    }
+  },
+  "decay": {
+    "from_step": 16,
+    "to_step": 32,
+    "paired_t": {
+      "n": 6,
+      "effect": 0.00985,
+      "sd_between": 0.063262,
+      "se": 0.025827,
+      "t": 0.3814,
+      "p_two_sided": 0.71858,
+      "per_seed_diffs": [
+        0.0521,
+        -0.0208,
+        -0.0139,
+        -0.0903,
+        0.0521,
+        0.0799
+      ],
+      "sign_dense_gt_sparse": 3
+    },
+    "bootstrap": {
+      "ci95_lower": -0.04052,
+      "ci95_upper": 0.05385,
+      "p_two_sided_boot": 0.6846
+    }
+  },
+  "per_arm_delta": {
+    "rl_pos": {
+      "n": 6,
+      "effect": 0.048033,
+      "sd_between": 0.046137,
+      "se": 0.018836,
+      "t": 2.5501,
+      "p_two_sided": 0.05126,
+      "per_seed_diffs": [
+        0.0521,
+        0.1111,
+        0.0486,
+        0.0313,
+        0.0729,
+        -0.0278
+      ],
+      "sign_dense_gt_sparse": 5
+    },
+    "sft": {
+      "n": 6,
+      "effect": 0.057883,
+      "sd_between": 0.066232,
+      "se": 0.027039,
+      "t": 2.1407,
+      "p_two_sided": 0.08524,
+      "per_seed_diffs": [
+        0.1042,
+        0.0903,
+        0.0347,
+        -0.059,
+        0.125,
+        0.0521
+      ],
+      "sign_dense_gt_sparse": 5
+    }
+  }
+}

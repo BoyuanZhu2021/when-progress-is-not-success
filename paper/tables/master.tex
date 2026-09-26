@@ -1,0 +1,31 @@
+\setlength{\tabcolsep}{3pt}\small
+\resizebox{\linewidth}{!}{\begin{tabular}{lrrrr}
+\toprule
+\rowcolor{headcolor}\textcolor{white}{Method} & \textcolor{white}{\begin{tabular}[b]{@{}c@{}}Sparse ASR (\%)\\mean $\pm$ sd\end{tabular}} & \textcolor{white}{\begin{tabular}[b]{@{}c@{}}ASR (\%)\\mean $\pm$ sd\end{tabular}} & \textcolor{white}{\begin{tabular}[b]{@{}c@{}}$\Delta\pm95\%$\\(pp)\end{tabular}} & \textcolor{white}{\begin{tabular}[b]{@{}c@{}}Wins /\\pairs\end{tabular}} \\
+\midrule
+\addlinespace[3pt]
+\rowcolor{headcolor!10}\multicolumn{5}{l}{\textbf{(A)} Original campaign, iteration 16} \\
+\raisebox{0.3ex}{\textcolor{sparsecolor}{\rule{5pt}{5pt}}}~Sparse \citep{shao2024deepseekmath} & -- & 43.71 $\pm$ 4.1 & -- & -- \\
+\raisebox{0.3ex}{\textcolor{densecolor}{\rule{5pt}{5pt}}}~Dense \citep{shao2024deepseekmath} & 46.01 $\pm$ 2.7 & 32.00 $\pm$ 5.0 & \cellcolor{densecolor!14}\textcolor{densecolor}{$-$14.01 $\pm$ 6.29} & \textcolor{densecolor}{0/6}\,\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{0.0pt}{4pt}}\textcolor{gray!35}{\rule{12.0pt}{4pt}}} \\
+\raisebox{0.3ex}{\textcolor{densecolor}{\rule{5pt}{5pt}}}~Lower Threshold & 46.60 $\pm$ 2.6 & 25.00 $\pm$ 2.2 & \cellcolor{densecolor!14}\textcolor{densecolor}{$-$21.60 $\pm$ 1.24} & \textcolor{densecolor}{0/5}\,\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{0.0pt}{4pt}}\textcolor{gray!35}{\rule{12.0pt}{4pt}}} \\
+\raisebox{0.3ex}{\textcolor{densecolor}{\rule{5pt}{5pt}}}~Threshold Curriculum \citep{bengio2009curriculum} & 46.01 $\pm$ 2.7 & 29.86 $\pm$ 4.7 & \cellcolor{densecolor!14}\textcolor{densecolor}{$-$16.15 $\pm$ 4.28} & \textcolor{densecolor}{0/6}\,\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{0.0pt}{4pt}}\textcolor{gray!35}{\rule{12.0pt}{4pt}}} \\
+\raisebox{0.3ex}{\textcolor{samplecolor}{\rule{5pt}{5pt}}}~Adaptive Allocation \citep{nguyen2026vip} & 46.35 $\pm$ 3.0 & 45.31 $\pm$ 2.5 & \cellcolor{densecolor!14}\textcolor{densecolor}{$-$1.04 $\pm$ 5.24} & \textcolor{diagramink}{2/4}\,\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{6.0pt}{4pt}}\textcolor{gray!35}{\rule{6.0pt}{4pt}}} \\
+\raisebox{0.3ex}{\textcolor{samplecolor}{\rule{5pt}{5pt}}}~Success Replay \citep{oh2018sil} & 46.35 $\pm$ 3.0 & 48.44 $\pm$ 5.5 & \cellcolor{ofccolor!14}\textcolor{ofccolor}{$+$2.08 $\pm$ 4.46} & \textcolor{ofccolor}{3/4}\,\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{9.0pt}{4pt}}\textcolor{gray!35}{\rule{3.0pt}{4pt}}} \\
+\raisebox{0.3ex}{\textcolor{samplecolor}{\rule{5pt}{5pt}}}~More Rollouts \citep{hu2025brorl} & 46.38 $\pm$ 2.7 & 50.45 $\pm$ 3.7 & \cellcolor{ofccolor!14}\textcolor{ofccolor}{$+$4.07 $\pm$ 4.02} & \textcolor{ofccolor}{5/7}\,\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{8.6pt}{4pt}}\textcolor{gray!35}{\rule{3.4pt}{4pt}}} \\
+\rowcolor{ofccolor!20}\textbf{\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{5pt}{5pt}}}~\textcolor{ofccolor}{OFC} (ours)} & \textbf{43.71 $\pm$ 4.1} & \textbf{48.31 $\pm$ 4.6} & \textbf{\textcolor{ofccolor}{$+$4.60 $\pm$ 2.37}} & \textbf{\textcolor{ofccolor}{13/16}\,\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{9.8pt}{4pt}}\textcolor{gray!35}{\rule{2.2pt}{4pt}}}} \\
+\addlinespace[3pt]
+\rowcolor{headcolor!10}\multicolumn{5}{l}{\textbf{(B)} Mechanism study, iteration 8} \\
+\raisebox{0.3ex}{\textcolor{sparsecolor}{\rule{5pt}{5pt}}}~Sparse \citep{shao2024deepseekmath} & -- & 35.42 $\pm$ 8.1 & -- & -- \\
+\rowcolor{ofccolor!20}\textbf{\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{5pt}{5pt}}}~\textcolor{ofccolor}{OFC} (ours)} & \textbf{35.42 $\pm$ 8.1} & \textbf{42.56 $\pm$ 5.8} & \textbf{\textcolor{ofccolor}{$+$7.14 $\pm$ 3.02}} & \textbf{\textcolor{ofccolor}{7/7}\,\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{12.0pt}{4pt}}\textcolor{gray!35}{\rule{0.0pt}{4pt}}}} \\
+\raisebox{0.3ex}{\textcolor{poscolor}{\rule{5pt}{5pt}}}~Positive-only RL \citep{oh2018sil} & 34.09 $\pm$ 8.0 & 43.06 $\pm$ 3.9 & \cellcolor{ofccolor!14}\textcolor{ofccolor}{$+$8.97 $\pm$ 10.05} & \textcolor{ofccolor}{4/6}\,\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{8.0pt}{4pt}}\textcolor{gray!35}{\rule{4.0pt}{4pt}}} \\
+\raisebox{0.3ex}{\textcolor{gray}{\rule{5pt}{5pt}}}~Unfiltered CE & -- & 15.28 & -- & -- \\
+\addlinespace[3pt]
+\rowcolor{headcolor!10}\multicolumn{5}{l}{\textbf{(C)} Same mechanism runs, iteration 32} \\
+\raisebox{0.3ex}{\textcolor{sparsecolor}{\rule{5pt}{5pt}}}~Sparse \citep{shao2024deepseekmath} & -- & 54.37 $\pm$ 4.5 & -- & -- \\
+\rowcolor{ofccolor!20}\textbf{\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{5pt}{5pt}}}~\textcolor{ofccolor}{OFC} (ours)} & \textbf{54.37 $\pm$ 4.5} & \textbf{51.19 $\pm$ 5.6} & \textbf{\textcolor{densecolor}{$-$3.18 $\pm$ 5.65}} & \textbf{\textcolor{densecolor}{1/7}\,\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{1.7pt}{4pt}}\textcolor{gray!35}{\rule{10.3pt}{4pt}}}} \\
+\raisebox{0.3ex}{\textcolor{poscolor}{\rule{5pt}{5pt}}}~Positive-only RL \citep{oh2018sil} & 53.41 $\pm$ 4.1 & 52.89 $\pm$ 2.1 & \cellcolor{densecolor!14}\textcolor{densecolor}{$-$0.52 $\pm$ 4.73} & \textcolor{diagramink}{3/6}\,\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{6.0pt}{4pt}}\textcolor{gray!35}{\rule{6.0pt}{4pt}}} \\
+\raisebox{0.3ex}{\textcolor{gray}{\rule{5pt}{5pt}}}~Unfiltered CE & -- & 12.85 & -- & -- \\
+\bottomrule
+\addlinespace[2pt]
+\multicolumn{5}{l}{\scriptsize \raisebox{0.3ex}{\textcolor{sparsecolor}{\rule{5pt}{5pt}}}~Sparse reference\qquad \raisebox{0.3ex}{\textcolor{densecolor}{\rule{5pt}{5pt}}}~denser/relaxed signal\qquad \raisebox{0.3ex}{\textcolor{samplecolor}{\rule{5pt}{5pt}}}~more/reused experience\qquad \raisebox{0.3ex}{\textcolor{poscolor}{\rule{5pt}{5pt}}}~positive-only RL\qquad \raisebox{0.3ex}{\textcolor{gray}{\rule{5pt}{5pt}}}~unfiltered CE\qquad \raisebox{0.3ex}{\textcolor{ofccolor}{\rule{5pt}{5pt}}}~OFC (ours)} \\
+\end{tabular}}

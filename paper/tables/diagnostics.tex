@@ -1,0 +1,29 @@
+\setlength{\tabcolsep}{4pt}\small
+\resizebox{\linewidth}{!}{\begin{tabular}{lrrrrrr}
+\toprule
+\rowcolor{headcolor}\textcolor{white}{Method} & \textcolor{white}{\begin{tabular}[b]{@{}c@{}}Rel.\ $\Delta$\\(\%)\end{tabular}} & \textcolor{white}{$p$} & \textcolor{white}{\begin{tabular}[b]{@{}c@{}}Held-out\\$\Phi$\end{tabular}} & \textcolor{white}{\begin{tabular}[b]{@{}c@{}}Cross-domain\\ASR, Slack (\%)\end{tabular}} & \textcolor{white}{\begin{tabular}[b]{@{}c@{}}Zero-signal\\groups (\%)\end{tabular}} & \textcolor{white}{\begin{tabular}[b]{@{}c@{}}Train succ.\\(\%)\end{tabular}} \\
+\midrule
+\addlinespace[3pt]
+\rowcolor{headcolor!10}\multicolumn{7}{l}{\textbf{(A)} Original campaign, iteration 16} \\
+\raisebox{0.3ex}{\textcolor{sparsecolor}{\rule{5pt}{5pt}}}~Sparse & -- & -- & 0.591 & 10.22 & 46.9 & 31.3 \\
+\raisebox{0.3ex}{\textcolor{densecolor}{\rule{5pt}{5pt}}}~Dense & \textcolor{densecolor}{$-$30.4} & 0.0023 & 0.653 & 11.80 & 12.2 & 23.4 \\
+\raisebox{0.3ex}{\textcolor{densecolor}{\rule{5pt}{5pt}}}~Lower Threshold & \textcolor{densecolor}{$-$46.3} & $<$0.0001 & 0.622 & 9.79 & 39.6 & 26.5 \\
+\raisebox{0.3ex}{\textcolor{densecolor}{\rule{5pt}{5pt}}}~Threshold Curriculum & \textcolor{densecolor}{$-$35.1} & 0.0002 & 0.616 & 9.03 & 40.1 & 26.2 \\
+\raisebox{0.3ex}{\textcolor{samplecolor}{\rule{5pt}{5pt}}}~Adaptive Allocation & \textcolor{densecolor}{$-$2.2} & 0.5724 & 0.597 & 7.29 & 43.8 & 39.9 \\
+\raisebox{0.3ex}{\textcolor{samplecolor}{\rule{5pt}{5pt}}}~Success Replay & \textcolor{ofccolor}{$+$4.5} & 0.2335 & 0.617 & 10.16 & 46.9 & 34.7 \\
+\raisebox{0.3ex}{\textcolor{samplecolor}{\rule{5pt}{5pt}}}~More Rollouts & \textcolor{ofccolor}{$+$8.8} & 0.0479 & 0.618 & 11.61 & 39.0 & 37.1 \\
+\rowcolor{ofccolor!20}\textbf{\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{5pt}{5pt}}}~\textcolor{ofccolor}{OFC} (ours)} & \textbf{\textcolor{ofccolor}{$+$10.5}} & \textbf{0.0009} & \textbf{0.604} & \textbf{15.62} & \textbf{38.7} & \textbf{39.3} \\
+\addlinespace[3pt]
+\rowcolor{headcolor!10}\multicolumn{7}{l}{\textbf{(B)} Mechanism study, iteration 8} \\
+\raisebox{0.3ex}{\textcolor{sparsecolor}{\rule{5pt}{5pt}}}~Sparse & -- & -- & 0.564 & 11.61 & 49.7 & 23.0 \\
+\rowcolor{ofccolor!20}\textbf{\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{5pt}{5pt}}}~\textcolor{ofccolor}{OFC} (ours)} & \textbf{\textcolor{ofccolor}{$+$20.2}} & \textbf{0.0012} & \textbf{0.592} & \textbf{9.38} & \textbf{42.1} & \textbf{30.0} \\
+\raisebox{0.3ex}{\textcolor{poscolor}{\rule{5pt}{5pt}}}~Positive-only RL & \textcolor{ofccolor}{$+$26.3} & 0.0702 & 0.606 & 14.06 & 47.6 & 29.7 \\
+\raisebox{0.3ex}{\textcolor{gray}{\rule{5pt}{5pt}}}~Unfiltered CE & -- & -- & 0.439 & 5.21 & 0.0 & 19.7 \\
+\addlinespace[3pt]
+\rowcolor{headcolor!10}\multicolumn{7}{l}{\textbf{(C)} Same mechanism runs, iteration 32} \\
+\raisebox{0.3ex}{\textcolor{sparsecolor}{\rule{5pt}{5pt}}}~Sparse & -- & -- & 0.640 & 11.61 & 50.5 & 40.4 \\
+\rowcolor{ofccolor!20}\textbf{\raisebox{0.3ex}{\textcolor{ofccolor}{\rule{5pt}{5pt}}}~\textcolor{ofccolor}{OFC} (ours)} & \textbf{\textcolor{densecolor}{$-$5.8}} & \textbf{0.2184} & \textbf{0.621} & \textbf{13.69} & \textbf{36.5} & \textbf{43.8} \\
+\raisebox{0.3ex}{\textcolor{poscolor}{\rule{5pt}{5pt}}}~Positive-only RL & \textcolor{densecolor}{$-$1.0} & 0.7873 & 0.630 & 14.93 & 51.1 & 45.9 \\
+\raisebox{0.3ex}{\textcolor{gray}{\rule{5pt}{5pt}}}~Unfiltered CE & -- & -- & 0.463 & 11.46 & 0.0 & 16.5 \\
+\bottomrule
+\end{tabular}}
